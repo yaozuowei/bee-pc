@@ -70,7 +70,7 @@ export default {
     },
     mounted() {
         if (!this.$store.state.location.isLocation) {
-            this.getLocation();
+            // this.getLocation();
         }
     },
     methods: {

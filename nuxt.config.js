@@ -3,20 +3,20 @@ import { format, transports } from 'winston';
 const IsConsole = [];
 const scripts = [
     // 百度定位
-    {
-        type: 'text/javascript',
-        src: 'https://api.map.baidu.com/api?v=1.0&&type=webgl&ak=qBy8PolN6pIaq6lukp3eivEwH4ScDh2e'
-    }
+    // {
+    //     type: 'text/javascript',
+    //     src: 'https://api.map.baidu.com/api?v=1.0&&type=webgl&ak=qBy8PolN6pIaq6lukp3eivEwH4ScDh2e'
+    // }
 ];
 if (process.env.NODE_ENV === 'production') {
     IsConsole.push('transform-remove-console');
 }
 // 百度推广
 if (process.env.BASE_API_URL === 'https://pc-api.beeliip.com') {
-    scripts.push({
-        type: 'text/javascript',
-        src: 'https://hm.baidu.com/hm.js?15f6a92d3b784bc5798548c99d841963'
-    });
+    // scripts.push({
+    //     type: 'text/javascript',
+    //     src: 'https://hm.baidu.com/hm.js?15f6a92d3b784bc5798548c99d841963'
+    // });
 }
 // 日志存放路径
 const infoLogPath = path.resolve(process.cwd(), './logs', `info.log`);
