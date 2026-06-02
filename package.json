@@ -1,0 +1,67 @@
+{
+    "name": "bee-mall-pc",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "dev:test": "nuxt --dotenv .env.test --open",
+        "dev:prod": "nuxt  --dotenv .env.prod --open",
+        "build:test": "nuxt build --dotenv .env.test",
+        "build:prod": "nuxt build  --dotenv .env.prod",
+        "up:test": "nuxt build --dotenv .env.test && node ftp.js",
+        "start": "nuxt start --dotenv .env.test",
+        "start:prod": "nuxt start --dotenv .env.prod",
+        "generate": "nuxt generate",
+        "commit": "git-cz",
+        "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
+        "lint:prettier": "prettier --check .",
+        "lint": "npm run lint:js && npm run lint:prettier",
+        "lintfix": "prettier --write --list-different . && npm run lint:js -- --fix"
+    },
+    "dependencies": {
+        "@nuxtjs/axios": "^5.13.6",
+        "ant-design-vue": "^1.7.8",
+        "cookie-universal-nuxt": "^2.2.2",
+        "core-js": "^3.19.3",
+        "moment": "^2.29.4",
+        "nuxt": "^2.15.8",
+        "nuxt-winston-log": "^1.2.0",
+        "ssh2-sftp-client": "^9.0.4",
+        "vue": "^2.6.14",
+        "vue-lazyload": "^1.3.4",
+        "vue-photo-preview": "^1.1.3",
+        "vue-piczoom": "^1.0.6",
+        "vue-server-renderer": "^2.6.14",
+        "vue-template-compiler": "^2.6.14",
+        "vuex-persistedstate": "^4.1.0"
+    },
+    "devDependencies": {
+        "@babel/eslint-parser": "^7.16.3",
+        "@nuxtjs/eslint-config": "^8.0.0",
+        "@nuxtjs/eslint-module": "^3.0.2",
+        "@nuxtjs/style-resources": "^1.2.1",
+        "babel-plugin-component": "^1.1.1",
+        "babel-plugin-import": "^1.13.5",
+        "babel-plugin-transform-remove-console": "^6.9.4",
+        "cz-customizable": "^6.9.2",
+        "eslint": "^8.4.1",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-nuxt": "^3.1.0",
+        "eslint-plugin-vue": "^8.2.0",
+        "less": "^3.13.1",
+        "less-loader": "^5.0.0",
+        "postcss-hexrgba": "^2.0.1",
+        "postcss-nested": "^4.2.3",
+        "postcss-responsive-type": "^1.0.0",
+        "prettier": "^2.5.1",
+        "sass": "^1.55.0",
+        "sass-loader": "^10.1.1",
+        "vue-baidu-map": "^0.21.22",
+        "webpack": "^4.46.0"
+    },
+    "config": {
+        "commitizen": {
+            "path": "node_modules/cz-customizable"
+        }
+    }
+}
+

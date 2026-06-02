@@ -1,0 +1,39 @@
+{
+    "name": "bee-mall-pc",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "dev:test": "nuxt --dotenv .env.test --open",
+        "dev:prod": "nuxt  --dotenv .env.prod --open",
+        "build:test": "nuxt build --dotenv .env.test",
+        "build:prod": "nuxt build  --dotenv .env.prod",
+        "start": "nuxt start --dotenv .env.test",
+        "generate": "nuxt generate",
+        "commit": "git-cz",
+        "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
+        "lint:prettier": "prettier --check .",
+        "lint": "npm run lint:js && npm run lint:prettier",
+        "lintfix": "prettier --write --list-different . && npm run lint:js -- --fix"
+    },
+    "dependencies": {
+        "@nuxtjs/axios": "^5.13.6",
+        "ant-design-vue": "^1.7.8",
+        "classnames": "^2.3.2",
+        "cookie-universal-nuxt": "^2.2.2",
+        "core-js": "^3.19.3",
+        "moment": "^2.29.4",
+        "nuxt": "^2.15.8",
+        "nuxt-winston-log": "^1.2.0"
+    },
+    "devDependencies": {
+        "babel-helper-vue-jsx-merge-props": "^2.0.3",
+        "babel-runtime": "^6.26.0",
+        "component-classes": "^1.2.6",
+        "vue-ref": "^2.0.0"
+    },
+    "config": {
+        "commitizen": {
+            "path": "node_modules/cz-customizable"
+        }
+    }
+}
